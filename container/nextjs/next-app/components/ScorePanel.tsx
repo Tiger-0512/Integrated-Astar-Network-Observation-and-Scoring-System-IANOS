@@ -17,15 +17,14 @@ const ScorePanel: FC<ScorePanelProps> = (props) => {
 
   // const [usDashboardUrl, setUsDashboardUrl] = useState("");
 
-  return (
-    props.isLeft ?
+  return props.isLeft ? (
     <div className="rounded-md col-span1 bg-gradient-to-r from-[#C6279B] to-[#694CCE] w-full p-0.5">
-<InnerPanel dashboardName={props.dashboardName} dashboardUrl={props.dashboardUrl} />
-    </div> :
-    <div className="rounded-md col-span1 bg-gradient-to-r from-[#694CCE] to-[#02E3FF] w-full p-0.5">
-<InnerPanel dashboardName={props.dashboardName} dashboardUrl={props.dashboardUrl} />
+      <InnerPanel dashboardName={props.dashboardName} dashboardUrl={props.dashboardUrl} />
     </div>
-    
+  ) : (
+    <div className="rounded-md col-span1 bg-gradient-to-r from-[#694CCE] to-[#02E3FF] w-full p-0.5">
+      <InnerPanel dashboardName={props.dashboardName} dashboardUrl={props.dashboardUrl} />
+    </div>
   );
 };
 

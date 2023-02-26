@@ -4,147 +4,147 @@ const top10TokenActivitySnapshotBody: object = {
     hideControls: true,
     panels: [
       {
-        "datasource": {
-          "type": "grafana-opensearch-datasource",
-          "uid": "18ysFDbVk"
+        datasource: {
+          type: "grafana-opensearch-datasource",
+          uid: "18ysFDbVk",
         },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
+        fieldConfig: {
+          defaults: {
+            color: {
+              mode: "palette-classic",
             },
-            "custom": {
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
+            custom: {
+              axisCenteredZero: false,
+              axisColorMode: "text",
+              axisLabel: "",
+              axisPlacement: "auto",
+              barAlignment: 0,
+              drawStyle: "line",
+              fillOpacity: 0,
+              gradientMode: "none",
+              hideFrom: {
+                legend: false,
+                tooltip: false,
+                viz: false,
               },
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
+              lineInterpolation: "linear",
+              lineWidth: 1,
+              pointSize: 5,
+              scaleDistribution: {
+                type: "linear",
               },
-              "showPoints": "auto",
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
+              showPoints: "auto",
+              spanNulls: false,
+              stacking: {
+                group: "A",
+                mode: "none",
               },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
+              thresholdsStyle: {
+                mode: "off",
+              },
             },
-            "mappings": [],
-            "thresholds": {
-              "mode": "percentage",
-              "steps": [
+            mappings: [],
+            thresholds: {
+              mode: "percentage",
+              steps: [
                 {
-                  "color": "green",
-                  "value": null
+                  color: "green",
+                  value: null,
                 },
                 {
-                  "color": "orange",
-                  "value": 70
+                  color: "orange",
+                  value: 70,
                 },
                 {
-                  "color": "red",
-                  "value": 85
-                }
-              ]
-            }
+                  color: "red",
+                  value: 85,
+                },
+              ],
+            },
           },
-          "overrides": []
+          overrides: [],
         },
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 0,
-          "y": 11
+        gridPos: {
+          h: 8,
+          w: 12,
+          x: 0,
+          y: 11,
         },
-        "id": 7,
-        "options": {
-          "legend": {
-            "calcs": [],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
+        id: 7,
+        options: {
+          legend: {
+            calcs: [],
+            displayMode: "list",
+            placement: "bottom",
+            showLegend: true,
           },
-          "tooltip": {
-            "mode": "single",
-            "sort": "none"
-          }
+          tooltip: {
+            mode: "single",
+            sort: "none",
+          },
         },
-        "pluginVersion": "9.3.6",
-        "targets": [
+        pluginVersion: "9.3.6",
+        targets: [
           {
-            "alias": "",
-            "bucketAggs": [
+            alias: "",
+            bucketAggs: [
               {
-                "field": "type",
-                "id": "2",
-                "settings": {
-                  "min_doc_count": "0",
-                  "order": "desc",
-                  "orderBy": "_term",
-                  "size": "10"
+                field: "type",
+                id: "2",
+                settings: {
+                  min_doc_count: "0",
+                  order: "desc",
+                  orderBy: "_term",
+                  size: "10",
                 },
-                "type": "terms"
+                type: "terms",
               },
               {
-                "field": "symbol.keyword",
-                "id": "3",
-                "settings": {
-                  "min_doc_count": "0",
-                  "order": "desc",
-                  "orderBy": "_term",
-                  "size": "10"
+                field: "symbol.keyword",
+                id: "3",
+                settings: {
+                  min_doc_count: "0",
+                  order: "desc",
+                  orderBy: "_term",
+                  size: "10",
                 },
-                "type": "terms"
+                type: "terms",
               },
               {
-                "field": "timestamp",
-                "id": "4",
-                "settings": {
-                  "interval": "auto",
-                  "min_doc_count": "0",
-                  "trimEdges": "0"
+                field: "timestamp",
+                id: "4",
+                settings: {
+                  interval: "auto",
+                  min_doc_count: "0",
+                  trimEdges: "0",
                 },
-                "type": "date_histogram"
-              }
+                type: "date_histogram",
+              },
             ],
-            "datasource": {
-              "type": "grafana-opensearch-datasource",
-              "uid": "18ysFDbVk"
+            datasource: {
+              type: "grafana-opensearch-datasource",
+              uid: "18ysFDbVk",
             },
-            "format": "table",
-            "metrics": [
+            format: "table",
+            metrics: [
               {
-                "id": "1",
-                "type": "count"
-              }
+                id: "1",
+                type: "count",
+              },
             ],
-            "query": "",
-            "queryType": "lucene",
-            "refId": "A",
-            "timeField": "timestamp"
-          }
+            query: "",
+            queryType: "lucene",
+            refId: "A",
+            timeField: "timestamp",
+          },
         ],
-        "title": "Top 10 Token Activity",
-        "type": "timeseries"
+        title: "Top 10 Token Activity",
+        type: "timeseries",
       },
     ],
-    "time": {
-      "from": "2022-01-09T15:00:00.000Z",
-      "to": "2022-04-15T14:59:59.000Z"
+    time: {
+      from: "2022-01-09T15:00:00.000Z",
+      to: "2022-04-15T14:59:59.000Z",
     },
     title: "AccountlDashboard",
     version: 1,

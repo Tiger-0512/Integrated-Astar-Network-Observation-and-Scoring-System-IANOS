@@ -1,4 +1,4 @@
-const traderScoreSnapshotBody: object = {
+const diversityScoreSnapshotBody: object = {
   dashboard: {
     id: null,
     hideControls: true,
@@ -11,7 +11,7 @@ const traderScoreSnapshotBody: object = {
         fieldConfig: {
           defaults: {
             color: {
-              mode: "thresholds",
+              mode: "continuous-GrYlRd",
             },
             mappings: [],
             thresholds: {
@@ -32,21 +32,22 @@ const traderScoreSnapshotBody: object = {
         },
         gridPos: {
           h: 9,
-          w: 12,
+          w: 24,
           x: 0,
           y: 8,
         },
-        id: 1,
-        maxDataPoints: 10,
+        id: 4,
         options: {
-          orientation: "auto",
+          displayMode: "lcd",
+          minVizHeight: 10,
+          minVizWidth: 0,
+          orientation: "horizontal",
           reduceOptions: {
-            calcs: ["lastNotNull"],
+            calcs: [],
             fields: "",
-            values: false,
+            values: true,
           },
-          showThresholdLabels: false,
-          showThresholdMarkers: true,
+          showUnfilled: true,
         },
         pluginVersion: "9.3.6",
         targets: [
@@ -54,13 +55,13 @@ const traderScoreSnapshotBody: object = {
             alias: "",
             bucketAggs: [
               {
-                field: "amount",
-                id: "2",
+                field: "method.keyword",
+                id: "4",
                 settings: {
                   min_doc_count: "0",
                   order: "desc",
                   orderBy: "_term",
-                  size: "20",
+                  size: "10",
                 },
                 type: "terms",
               },
@@ -70,34 +71,34 @@ const traderScoreSnapshotBody: object = {
               uid: "18ysFDbVk",
             },
             format: "table",
-            hide: false,
             metrics: [
               {
-                field: "amount",
-                id: "1",
-                type: "avg",
+                field: "symbol.keyword",
+                id: "3",
+                type: "cardinality",
               },
             ],
             // 今回は動作確認のため既にトランザクションを行っているアドレスを指定します
             // 通常の運用では、Local Storage に格納した address を格納してください
-            query: "from:0x649be1c4dface544857e54d5c3fbdb8152b84b4e",
+            query: "from: 0x649be1c4dface544857e54d5c3fbdb8152b84b4e",
             queryType: "lucene",
             refId: "A",
             timeField: "timestamp",
           },
         ],
-        title: "Trader Score 📈 : 0x649be1c4dface544857e54d5c3fbdb8152b84b4e",
-        type: "gauge",
+        title:
+          "Transaction Method Diversity Score - from : 0x649be1c4dface544857e54d5c3fbdb8152b84b4e",
+        type: "bargauge",
       },
     ],
     time: {
       from: "2022-01-09T15:00:00.000Z",
       to: "2022-04-15T14:59:59.000Z",
     },
-    title: "TraderScorelDashboard",
+    title: "AccountlDashboard",
     version: 1,
   },
   expires: 3600,
 };
 
-export default traderScoreSnapshotBody;
+export default diversityScoreSnapshotBody;

@@ -6,7 +6,22 @@ import getDashboard from "@/components/utils/getDashboard";
 import { useStore } from "@/libs/store";
 
 const ConnectMetamaskButton: FC = () => {
-  const { address, dashboardUrl, traderScoreDbUrl, diamondScoreDbUrl, statisticsDbUrl, allDbUrl, setAddress, setDashboardUrl, setTraderScoreDbUrl, setDiamondScoreDbUrl, setStatisticsDbUrl, setAllDbUrl } = useStore((state) => state);
+  const {
+    address,
+    dashboardUrl,
+    traderScoreDbUrl,
+    diamondScoreDbUrl,
+    diversityScoreDbUrl,
+    statisticsDbUrl,
+    allDbUrl,
+    setAddress,
+    setDashboardUrl,
+    setTraderScoreDbUrl,
+    setDiamondScoreDbUrl,
+    setDiversityScoreDbUrl,
+    setStatisticsDbUrl,
+    setAllDbUrl,
+  } = useStore((state) => state);
 
   const [usAddress, setUsAddress] = useState("");
 
@@ -17,6 +32,7 @@ const ConnectMetamaskButton: FC = () => {
     // getDashboard(address, dashboardUrl, setDashboardUrl);
     getDashboard(address, traderScoreDbUrl, setTraderScoreDbUrl, "trader");
     getDashboard(address, diamondScoreDbUrl, setDiamondScoreDbUrl, "diamond");
+    getDashboard(address, diversityScoreDbUrl, setDiversityScoreDbUrl, "diversity");
     getDashboard(address, statisticsDbUrl, setStatisticsDbUrl, "statistics");
     getDashboard(address, allDbUrl, setAllDbUrl, "all");
   }, [address]);
@@ -41,4 +57,3 @@ const ConnectMetamaskButton: FC = () => {
   );
 };
 export default ConnectMetamaskButton;
-

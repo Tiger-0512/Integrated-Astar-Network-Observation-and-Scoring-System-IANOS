@@ -85,9 +85,9 @@ const totalTransferSumSnapshotBody: object = {
         ],
       },
     ],
-    "time": {
-      "from": "2022-01-09T15:00:00.000Z",
-      "to": "2022-04-15T14:59:59.000Z"
+    time: {
+      from: "2022-01-09T15:00:00.000Z",
+      to: "2022-04-15T14:59:59.000Z",
     },
     title: "AccountlDashboard",
     version: 1,

@@ -4,491 +4,487 @@ const allInOneSnapshotBody: object = {
     hideControls: true,
     panels: [
       {
-        "datasource": {
-          "type": "grafana-opensearch-datasource",
-          "uid": "18ysFDbVk"
+        datasource: {
+          type: "grafana-opensearch-datasource",
+          uid: "18ysFDbVk",
         },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
+        fieldConfig: {
+          defaults: {
+            color: {
+              mode: "thresholds",
             },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
+            mappings: [],
+            thresholds: {
+              mode: "absolute",
+              steps: [
                 {
-                  "color": "green",
-                  "value": null
+                  color: "green",
+                  value: null,
                 },
                 {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
+                  color: "red",
+                  value: 80,
+                },
+              ],
+            },
           },
-          "overrides": []
+          overrides: [],
         },
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 0,
-          "y": 0
+        gridPos: {
+          h: 8,
+          w: 12,
+          x: 0,
+          y: 0,
         },
-        "id": 6,
-        "options": {
-          "orientation": "auto",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
+        id: 6,
+        options: {
+          orientation: "auto",
+          reduceOptions: {
+            calcs: ["lastNotNull"],
+            fields: "",
+            values: false,
           },
-          "showThresholdLabels": false,
-          "showThresholdMarkers": true
+          showThresholdLabels: false,
+          showThresholdMarkers: true,
         },
-        "pluginVersion": "9.3.6",
-        "targets": [
+        pluginVersion: "9.3.6",
+        targets: [
           {
-            "alias": "",
-            "bucketAggs": [
+            alias: "",
+            bucketAggs: [
               {
-                "field": "amount",
-                "id": "2",
-                "settings": {
-                  "min_doc_count": "0",
-                  "order": "desc",
-                  "orderBy": "_term",
-                  "size": "10"
+                field: "amount",
+                id: "2",
+                settings: {
+                  min_doc_count: "0",
+                  order: "desc",
+                  orderBy: "_term",
+                  size: "10",
                 },
-                "type": "terms"
-              }
+                type: "terms",
+              },
             ],
-            "datasource": {
-              "type": "grafana-opensearch-datasource",
-              "uid": "18ysFDbVk"
+            datasource: {
+              type: "grafana-opensearch-datasource",
+              uid: "18ysFDbVk",
             },
-            "format": "table",
-            "metrics": [
+            format: "table",
+            metrics: [
               {
-                "field": "amount",
-                "id": "1",
-                "type": "avg"
-              }
+                field: "amount",
+                id: "1",
+                type: "avg",
+              },
             ],
-            "query": "from:0x649be1c4dface544857e54d5c3fbdb8152b84b4e",
-            "queryType": "lucene",
-            "refId": "A",
-            "timeField": "timestamp"
-          }
+            query: "from:0x649be1c4dface544857e54d5c3fbdb8152b84b4e",
+            queryType: "lucene",
+            refId: "A",
+            timeField: "timestamp",
+          },
         ],
-        "title": "Activity Score 📈 : 0x649be1c4dface544857e54d5c3fbdb8152b84b4e",
-        "type": "gauge"
+        title: "Activity Score 📈 : 0x649be1c4dface544857e54d5c3fbdb8152b84b4e",
+        type: "gauge",
       },
       {
-        "datasource": {
-          "type": "grafana-opensearch-datasource",
-          "uid": "18ysFDbVk"
+        datasource: {
+          type: "grafana-opensearch-datasource",
+          uid: "18ysFDbVk",
         },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "continuous-GrYlRd"
+        fieldConfig: {
+          defaults: {
+            color: {
+              mode: "continuous-GrYlRd",
             },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
+            mappings: [],
+            thresholds: {
+              mode: "absolute",
+              steps: [
                 {
-                  "color": "green",
-                  "value": null
+                  color: "green",
+                  value: null,
                 },
                 {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
+                  color: "red",
+                  value: 80,
+                },
+              ],
+            },
           },
-          "overrides": []
+          overrides: [],
         },
-        "gridPos": {
-          "h": 8,
-          "w": 12,
-          "x": 12,
-          "y": 0
+        gridPos: {
+          h: 8,
+          w: 12,
+          x: 12,
+          y: 0,
         },
-        "id": 10,
-        "options": {
-          "displayMode": "lcd",
-          "minVizHeight": 10,
-          "minVizWidth": 0,
-          "orientation": "horizontal",
-          "reduceOptions": {
-            "calcs": [],
-            "fields": "",
-            "values": true
+        id: 10,
+        options: {
+          displayMode: "lcd",
+          minVizHeight: 10,
+          minVizWidth: 0,
+          orientation: "horizontal",
+          reduceOptions: {
+            calcs: [],
+            fields: "",
+            values: true,
           },
-          "showUnfilled": true
+          showUnfilled: true,
         },
-        "pluginVersion": "9.3.6",
-        "targets": [
+        pluginVersion: "9.3.6",
+        targets: [
           {
-            "alias": "",
-            "bucketAggs": [
+            alias: "",
+            bucketAggs: [
               {
-                "field": "from.keyword",
-                "id": "2",
-                "settings": {
-                  "min_doc_count": "0",
-                  "order": "desc",
-                  "orderBy": "1",
-                  "size": "20"
+                field: "from.keyword",
+                id: "2",
+                settings: {
+                  min_doc_count: "0",
+                  order: "desc",
+                  orderBy: "1",
+                  size: "20",
                 },
-                "type": "terms"
-              }
+                type: "terms",
+              },
             ],
-            "datasource": {
-              "type": "grafana-opensearch-datasource",
-              "uid": "18ysFDbVk"
+            datasource: {
+              type: "grafana-opensearch-datasource",
+              uid: "18ysFDbVk",
             },
-            "format": "table",
-            "metrics": [
+            format: "table",
+            metrics: [
               {
-                "field": "amount",
-                "id": "1",
-                "type": "sum"
-              }
+                field: "amount",
+                id: "1",
+                type: "sum",
+              },
             ],
-            "query": "symbol: *",
-            "queryType": "lucene",
-            "refId": "A",
-            "timeField": "timestamp"
-          }
+            query: "symbol: *",
+            queryType: "lucene",
+            refId: "A",
+            timeField: "timestamp",
+          },
         ],
-        "title": "UserTransferRanking - Symbol : *",
-        "type": "bargauge"
+        title: "UserTransferRanking - Symbol : *",
+        type: "bargauge",
       },
       {
-        "datasource": {
-          "type": "grafana-opensearch-datasource",
-          "uid": "18ysFDbVk"
+        datasource: {
+          type: "grafana-opensearch-datasource",
+          uid: "18ysFDbVk",
         },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "thresholds"
+        fieldConfig: {
+          defaults: {
+            color: {
+              mode: "thresholds",
             },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
+            mappings: [],
+            thresholds: {
+              mode: "absolute",
+              steps: [
                 {
-                  "color": "green",
-                  "value": null
+                  color: "green",
+                  value: null,
                 },
                 {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
+                  color: "red",
+                  value: 80,
+                },
+              ],
+            },
           },
-          "overrides": []
+          overrides: [],
         },
-        "gridPos": {
-          "h": 9,
-          "w": 12,
-          "x": 0,
-          "y": 8
+        gridPos: {
+          h: 9,
+          w: 12,
+          x: 0,
+          y: 8,
         },
-        "id": 4,
-        "options": {
-          "orientation": "auto",
-          "reduceOptions": {
-            "calcs": [
-              "lastNotNull"
-            ],
-            "fields": "",
-            "values": false
+        id: 4,
+        options: {
+          orientation: "auto",
+          reduceOptions: {
+            calcs: ["lastNotNull"],
+            fields: "",
+            values: false,
           },
-          "showThresholdLabels": false,
-          "showThresholdMarkers": true
+          showThresholdLabels: false,
+          showThresholdMarkers: true,
         },
-        "pluginVersion": "9.3.6",
-        "targets": [
+        pluginVersion: "9.3.6",
+        targets: [
           {
-            "alias": "",
-            "bucketAggs": [
+            alias: "",
+            bucketAggs: [
               {
-                "field": "timestamp",
-                "id": "2",
-                "settings": {
-                  "interval": "auto"
+                field: "timestamp",
+                id: "2",
+                settings: {
+                  interval: "auto",
                 },
-                "type": "date_histogram"
-              }
+                type: "date_histogram",
+              },
             ],
-            "datasource": {
-              "type": "grafana-opensearch-datasource",
-              "uid": "18ysFDbVk"
+            datasource: {
+              type: "grafana-opensearch-datasource",
+              uid: "18ysFDbVk",
             },
-            "format": "table",
-            "metrics": [
+            format: "table",
+            metrics: [
               {
-                "field": "block",
-                "id": "1",
-                "type": "max"
-              }
+                field: "block",
+                id: "1",
+                type: "max",
+              },
             ],
-            "query": "from: 0xd537c667d491949f0657102f56b077050aa7805f",
-            "queryType": "lucene",
-            "refId": "A",
-            "timeField": "timestamp"
-          }
+            query: "from: 0xd537c667d491949f0657102f56b077050aa7805f",
+            queryType: "lucene",
+            refId: "A",
+            timeField: "timestamp",
+          },
         ],
-        "title": "Latest Block Number Score - from : 0xd537c667d491949f0657102f56b077050aa7805f",
-        "type": "gauge"
+        title: "Latest Block Number Score - from : 0xd537c667d491949f0657102f56b077050aa7805f",
+        type: "gauge",
       },
       {
-        "datasource": {
-          "type": "grafana-opensearch-datasource",
-          "uid": "18ysFDbVk"
+        datasource: {
+          type: "grafana-opensearch-datasource",
+          uid: "18ysFDbVk",
         },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
+        fieldConfig: {
+          defaults: {
+            color: {
+              mode: "palette-classic",
             },
-            "custom": {
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
+            custom: {
+              axisCenteredZero: false,
+              axisColorMode: "text",
+              axisLabel: "",
+              axisPlacement: "auto",
+              barAlignment: 0,
+              drawStyle: "line",
+              fillOpacity: 0,
+              gradientMode: "none",
+              hideFrom: {
+                legend: false,
+                tooltip: false,
+                viz: false,
               },
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "type": "linear"
+              lineInterpolation: "linear",
+              lineWidth: 1,
+              pointSize: 5,
+              scaleDistribution: {
+                type: "linear",
               },
-              "showPoints": "auto",
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
+              showPoints: "auto",
+              spanNulls: false,
+              stacking: {
+                group: "A",
+                mode: "none",
               },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
+              thresholdsStyle: {
+                mode: "off",
+              },
             },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
+            mappings: [],
+            thresholds: {
+              mode: "absolute",
+              steps: [
                 {
-                  "color": "green",
-                  "value": null
+                  color: "green",
+                  value: null,
                 },
                 {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
+                  color: "red",
+                  value: 80,
+                },
+              ],
+            },
           },
-          "overrides": []
+          overrides: [],
         },
-        "gridPos": {
-          "h": 9,
-          "w": 12,
-          "x": 12,
-          "y": 8
+        gridPos: {
+          h: 9,
+          w: 12,
+          x: 12,
+          y: 8,
         },
-        "id": 2,
-        "options": {
-          "legend": {
-            "calcs": [],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
+        id: 2,
+        options: {
+          legend: {
+            calcs: [],
+            displayMode: "list",
+            placement: "bottom",
+            showLegend: true,
           },
-          "tooltip": {
-            "mode": "single",
-            "sort": "none"
-          }
+          tooltip: {
+            mode: "single",
+            sort: "none",
+          },
         },
-        "targets": [
+        targets: [
           {
-            "alias": "",
-            "bucketAggs": [
+            alias: "",
+            bucketAggs: [
               {
-                "field": "symbol.keyword",
-                "id": "3",
-                "settings": {
-                  "min_doc_count": "0",
-                  "order": "desc",
-                  "orderBy": "_term",
-                  "size": "10"
+                field: "symbol.keyword",
+                id: "3",
+                settings: {
+                  min_doc_count: "0",
+                  order: "desc",
+                  orderBy: "_term",
+                  size: "10",
                 },
-                "type": "terms"
+                type: "terms",
               },
               {
-                "field": "timestamp",
-                "id": "2",
-                "settings": {
-                  "interval": "auto"
+                field: "timestamp",
+                id: "2",
+                settings: {
+                  interval: "auto",
                 },
-                "type": "date_histogram"
-              }
+                type: "date_histogram",
+              },
             ],
-            "datasource": {
-              "type": "grafana-opensearch-datasource",
-              "uid": "18ysFDbVk"
+            datasource: {
+              type: "grafana-opensearch-datasource",
+              uid: "18ysFDbVk",
             },
-            "format": "table",
-            "metrics": [
+            format: "table",
+            metrics: [
               {
-                "id": "1",
-                "type": "count"
-              }
+                id: "1",
+                type: "count",
+              },
             ],
-            "query": "",
-            "queryType": "lucene",
-            "refId": "A",
-            "timeField": "timestamp"
-          }
+            query: "",
+            queryType: "lucene",
+            refId: "A",
+            timeField: "timestamp",
+          },
         ],
-        "title": "Top10 Token Activity",
-        "type": "timeseries"
+        title: "Top10 Token Activity",
+        type: "timeseries",
       },
       {
-        "datasource": {
-          "type": "grafana-opensearch-datasource",
-          "uid": "18ysFDbVk"
+        datasource: {
+          type: "grafana-opensearch-datasource",
+          uid: "18ysFDbVk",
         },
-        "fieldConfig": {
-          "defaults": {
-            "color": {
-              "mode": "palette-classic"
+        fieldConfig: {
+          defaults: {
+            color: {
+              mode: "palette-classic",
             },
-            "custom": {
-              "axisCenteredZero": false,
-              "axisColorMode": "text",
-              "axisLabel": "",
-              "axisPlacement": "auto",
-              "barAlignment": 0,
-              "drawStyle": "line",
-              "fillOpacity": 0,
-              "gradientMode": "none",
-              "hideFrom": {
-                "legend": false,
-                "tooltip": false,
-                "viz": false
+            custom: {
+              axisCenteredZero: false,
+              axisColorMode: "text",
+              axisLabel: "",
+              axisPlacement: "auto",
+              barAlignment: 0,
+              drawStyle: "line",
+              fillOpacity: 0,
+              gradientMode: "none",
+              hideFrom: {
+                legend: false,
+                tooltip: false,
+                viz: false,
               },
-              "lineInterpolation": "linear",
-              "lineWidth": 1,
-              "pointSize": 5,
-              "scaleDistribution": {
-                "log": 10,
-                "type": "log"
+              lineInterpolation: "linear",
+              lineWidth: 1,
+              pointSize: 5,
+              scaleDistribution: {
+                log: 10,
+                type: "log",
               },
-              "showPoints": "auto",
-              "spanNulls": false,
-              "stacking": {
-                "group": "A",
-                "mode": "none"
+              showPoints: "auto",
+              spanNulls: false,
+              stacking: {
+                group: "A",
+                mode: "none",
               },
-              "thresholdsStyle": {
-                "mode": "off"
-              }
+              thresholdsStyle: {
+                mode: "off",
+              },
             },
-            "mappings": [],
-            "thresholds": {
-              "mode": "absolute",
-              "steps": [
+            mappings: [],
+            thresholds: {
+              mode: "absolute",
+              steps: [
                 {
-                  "color": "green",
-                  "value": null
+                  color: "green",
+                  value: null,
                 },
                 {
-                  "color": "red",
-                  "value": 80
-                }
-              ]
-            }
+                  color: "red",
+                  value: 80,
+                },
+              ],
+            },
           },
-          "overrides": []
+          overrides: [],
         },
-        "gridPos": {
-          "h": 11,
-          "w": 24,
-          "x": 0,
-          "y": 17
+        gridPos: {
+          h: 11,
+          w: 24,
+          x: 0,
+          y: 17,
         },
-        "id": 8,
-        "options": {
-          "legend": {
-            "calcs": [],
-            "displayMode": "list",
-            "placement": "bottom",
-            "showLegend": true
+        id: 8,
+        options: {
+          legend: {
+            calcs: [],
+            displayMode: "list",
+            placement: "bottom",
+            showLegend: true,
           },
-          "tooltip": {
-            "mode": "single",
-            "sort": "none"
-          }
+          tooltip: {
+            mode: "single",
+            sort: "none",
+          },
         },
-        "targets": [
+        targets: [
           {
-            "alias": "",
-            "bucketAggs": [
+            alias: "",
+            bucketAggs: [
               {
-                "field": "timestamp",
-                "id": "2",
-                "settings": {
-                  "interval": "auto",
-                  "min_doc_count": "0",
-                  "trimEdges": "0"
+                field: "timestamp",
+                id: "2",
+                settings: {
+                  interval: "auto",
+                  min_doc_count: "0",
+                  trimEdges: "0",
                 },
-                "type": "date_histogram"
-              }
+                type: "date_histogram",
+              },
             ],
-            "datasource": {
-              "type": "grafana-opensearch-datasource",
-              "uid": "18ysFDbVk"
+            datasource: {
+              type: "grafana-opensearch-datasource",
+              uid: "18ysFDbVk",
             },
-            "format": "table",
-            "metrics": [
+            format: "table",
+            metrics: [
               {
-                "field": "amount",
-                "id": "1",
-                "type": "avg"
-              }
+                field: "amount",
+                id: "1",
+                type: "avg",
+              },
             ],
-            "query": "*",
-            "queryType": "lucene",
-            "refId": "A",
-            "timeField": "timestamp"
-          }
+            query: "*",
+            queryType: "lucene",
+            refId: "A",
+            timeField: "timestamp",
+          },
         ],
-        "title": "TotalTradingAmount",
-        "type": "timeseries"
+        title: "TotalTradingAmount",
+        type: "timeseries",
       },
     ],
-    "time": {
-      "from": "2022-01-09T15:00:00.000Z",
-      "to": "2022-04-15T14:59:59.000Z"
+    time: {
+      from: "2022-01-09T15:00:00.000Z",
+      to: "2022-04-15T14:59:59.000Z",
     },
     title: "AccountlDashboard",
     version: 1,

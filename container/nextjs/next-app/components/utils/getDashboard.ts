@@ -1,6 +1,11 @@
 import axios from "axios";
 
-const getDashboard = async (_userAddress: string, _dashboardUrl: string, _setDashboardUrl: any, _dashboardType: string) => {
+const getDashboard = async (
+  _userAddress: string,
+  _dashboardUrl: string,
+  _setDashboardUrl: any,
+  _dashboardType: string
+) => {
   const headers = {
     user_address: _userAddress,
     dashboard_url: _dashboardUrl,

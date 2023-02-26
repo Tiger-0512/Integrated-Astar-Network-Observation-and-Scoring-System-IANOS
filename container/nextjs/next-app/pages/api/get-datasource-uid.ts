@@ -16,7 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const datasourceUid = req.headers.datasource_uid;
 
   if (datasourceUid) {
-    console.log("Datasource UID already exists")
+    console.log("Datasource UID already exists");
     console.log("Datasource UID: ", datasourceUid);
 
     res.status(200).json({ datasourceUid: datasourceUid });
@@ -33,4 +33,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(200).json({ datasourceUid: datasourceUidRes });
   }
 }
-

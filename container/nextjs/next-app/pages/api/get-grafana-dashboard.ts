@@ -6,12 +6,15 @@ import sampleDashboardBody from "./api-body/sampleDashboardBody";
 import sampleSnapshotBody from "./api-body/sampleSnapshotBody";
 import traderScoreSnapshotBody from "./api-body/traderScoreSnapshotBody";
 import lastBlockNumberScoreSnapshotBody from "./api-body/lastBlockNumberScoreSnapshotBody";
+import diversityScoreSnapshotBody from "./api-body/transactionMethodDiversityScoreBody";
 import statisticsSnapshotBody from "./api-body/statisticsSnapshot";
-import allInOneSnapshotBody from "./api-body/allInOneSnapshotBody"; 
+import allInOneSnapshotBody from "./api-body/allInOneSnapshotBody";
+
 import getTraderScoreBodyByAddress from "@/components/utils/getTraderScoreByAddress";
 import getStatisticsBySymbol from "@/components/utils/getStatisticsBySymbol";
 
-// 今回は動作確認のため既に多くのトランザクションを行っているアドレスを指定します。
+// 今回は動作確認のため既にトランザクションを行っているアドレスを指定します
+// 通常の運用では、Local Storage に格納した address を格納してください
 const address = "0x649be1c4dface544857e54d5c3fbdb8152b84b4e";
 const traderScoreBody = getTraderScoreBodyByAddress(address);
 
@@ -41,6 +44,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     body = traderScoreBody;
   } else if (dashboardType === "diamond") {
     body = lastBlockNumberScoreSnapshotBody;
+  } else if (dashboardType === "diversity") {
+    body = diversityScoreSnapshotBody;
   } else if (dashboardType === "statistics") {
     body = statisticsBody;
   } else {
