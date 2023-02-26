@@ -1,0 +1,18 @@
+[Unit]
+Description= Node.js squid processor
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/squid-processor
+ExecStart=/.nvm/versions/node/v16.19.1/bin/node -r dotenv/config /root/squid-processor/lib/processor.js
+ExecStop=/usr/bin/pkill -e node
+Restart=always
+RestartSec=2
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=squid-processor
+EnvironmentFile=/etc/sysconfig/squid-processor
+
+[Install]
+WantedBy=multi-user.target
