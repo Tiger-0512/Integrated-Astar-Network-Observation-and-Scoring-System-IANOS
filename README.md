@@ -1,4 +1,4 @@
-# On-chain Identity Scoring System for Astar Network with Subsquid
+# Integrated Astar Network Observation and Scoring System - IANOS
 
 ![Dashboard](./doc/dashboard.png)
 
